@@ -32,3 +32,11 @@ function simplify(number) {
 }
 
 // or
+
+function simplify(n) {
+  return (n+'')
+    .split('').map((d, i, a) => ({d, l: a.length - i - 1}))
+    .filter((o) => +o.d)
+    .map((o) => o.d + (o.l ? '*1' + '0'.repeat(o.l) : ''))
+    .join('+');
+}
