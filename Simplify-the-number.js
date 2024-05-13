@@ -30,3 +30,5 @@ function simplify(number) {
 		}, '')
 		.slice(0, -1);
 }
+
+// or
